@@ -1,13 +1,43 @@
-This is set up as a platformIO project in VScode
+# Invisible Drum Set
 
-Upload the C code to the Arduino Nano using platformIO in VScode. Then run the play_sound.py file to listen to the output.
-The custom C libraries are stored in lib/src. A lot of these libraries can be improved or substituded for better libraries but they currently work good enough running on my exact hardware (Atmega328P new bootloader). It was a requirement for the course to write all libraries from scratch. Otherwise I would have used some standard libraries such as "util/delay.h" for example.
+## Introduction
+This project is a simulation of a drum set using an Arduino Nano and the BNO055 IMU sensor. It allows users to play drums without a physical drum set. The project is primarily developed in C for a course requirement that emphasized writing all libraries from scratch.
+
+## Setup
+### Prerequisites
+- PlatformIO in VScode (or whatever)
+- Arduino Nano with Atmega328P (new bootloader)
+
+### Installation
+1. Clone the repository.
+2. In VScode with PlatformIO, upload the C code to the Arduino Nano.
+
+## Usage
+After uploading `main.c`, execute the `play_sound.py` to get audio from your computer or headphones. Swing the drumsticks in a figure eight motion and then press the button to calibrate.
+.
+The `collect_data.c` under MAINS pairs with `collect_data.py` to log IMU data to a .txt file for analysis. The matlab file plots the data but you could use whatever program you like.
+.
+The project also includes foundational C++ code under CPP but this code is really bad in its current state. I began testing the hardware in C++ before refining the method of simulating the drum set in C.
+
+## Further Development
+Enhancements or replacement of the custom libraries I created could improve the project's maintainability.
+The latency can be decreased. Probably the python program playing the samples can be improved.
+The conditional logic for determining which sound to play in “main.c” can be fine-tuned and optimized. Currently it is tuned to my left handed playing style.
+Velocity sensitivity can be added but it requires changing the way communication is handled between the arduino and the python program.
+
+## Schematic Diagram
+![image (6)](https://github.com/HafthorArni/Invisible-Drum-Set/assets/111596842/853b1885-bde0-454a-a892-8da48c033565)
 
 
-Collect_data.c under MAINS is used along side the collect_data.py program to write IMU data to a .txt file for analysis. The matlab script plots the content of the txt file. This could also be plotted using python but I haven't written the code for that.
+## Software diagram
+![image (7)](https://github.com/HafthorArni/Invisible-Drum-Set/assets/111596842/754ff8bd-817c-479d-af5a-7da1d924d395)
 
 
-The C++ code under CPP is really underdeveloped because I made the switch to C early on in the project but it includes the basics to get started if you dont't want to work in C.
+## Contributing
+Contributions are welcome! Feel free to fork the project, make changes, and submit a pull request.
 
-Schematic diagram:
-![AirDrums_schem](https://github.com/HafthorArni/Invisible-Drum-Set/assets/111596842/338ac0de-1c2d-438f-a483-633e99d87779)
+## Contact
+For queries or collaborations, reach out through GitHub issues or email arnihafthor@gmail.com.
+
+## Documentation
+[Link to Project Report](https://drive.google.com/file/d/1G6_Wm_p50Q7FowhHeAtZddCkF3J9PWr1/preview)
