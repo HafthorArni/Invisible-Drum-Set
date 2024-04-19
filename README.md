@@ -2,6 +2,7 @@
 
 ## Introduction
 This project is a simulation of a drum set using an Arduino Nano and the BNO055 IMU sensor. It allows users to play drums without a physical drum set. The project is primarily developed in C for a course requirement that emphasized writing all libraries from scratch.
+
 ![drumsticks](https://github.com/HafthorArni/Invisible-Drum-Set/assets/111596842/df8816de-3efb-4c85-85ff-45e4e730acf8)
 
 
@@ -22,11 +23,11 @@ This project is a simulation of a drum set using an Arduino Nano and the BNO055 
 - The project also includes foundational C++ code under CPP but this code is really bad in its current state. I began testing the hardware in C++ before refining the method of simulating the drum set in C.
 
 ## Further Development
-- Enhancements or replacement of the custom libraries I created could improve the project's maintainability.
-- The latency can be decreased. The python program playing the samples can probably be improved.
+- The latency is not bad but it can be decreased. The python program playing the samples can probably be improved.
 - The conditional logic for determining which sound to play in “main.c” can be fine-tuned and optimized. Currently it is tuned to my left handed playing style.
-- Velocity sensitivity can be added but it requires changing the way communication is handled between the arduino and the python program.
-- Error handling.
+- Velocity sensitivity can be added if desired. It requires changing the way communication is handled between the arduino and the python program.
+- Include more error handling.
+- Enhancements or replacement of the custom libraries I created could improve the project's maintainability.
 
 ## Schematic Diagram
 ![image (6)](https://github.com/HafthorArni/Invisible-Drum-Set/assets/111596842/853b1885-bde0-454a-a892-8da48c033565)
