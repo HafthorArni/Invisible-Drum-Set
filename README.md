@@ -6,6 +6,14 @@ This project is a simulation of a drum set using an Arduino Nano and the BNO055 
 ![drumsticks](https://github.com/HafthorArni/Invisible-Drum-Set/assets/111596842/df8816de-3efb-4c85-85ff-45e4e730acf8)
 
 
+
+*A quick demo of the drum set. (Originally posted on my [TikTok](https://www.tiktok.com/@hafthor.arni))*
+
+
+
+https://github.com/user-attachments/assets/c2312f0d-bd0c-4fa4-85ea-b937c442fd06
+
+
 ## Setup
 ### Prerequisites
 - PlatformIO in VScode (or whatever you like)
